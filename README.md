@@ -48,3 +48,9 @@ container image for OpenShift.
 
   Log in to Jenkins and check the build progress. Approve its promotion to **openshift** project to make it available to other users on your cluster.
 
+
+* Troubleshoot 
+
+  ```
+  oc process -n openshift jenkins-persistent -p MEMORY_LIMIT=1024M|oc apply -f- -n jenkins-builder
+  ```
