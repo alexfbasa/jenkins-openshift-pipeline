@@ -3,6 +3,8 @@
 This repo contains resources used to build a pipeline for building new Jenkins
 container image for OpenShift.
 
+https://community.ibm.com/community/user/integration/viewdocument/create-your-integration-application?CommunityKey=77544459-9fda-40da-ae0b-fc8c76f0ce18&tab=librarydocuments
+
 # Building a new image - step by step
 
 * Log in the command line
@@ -58,5 +60,13 @@ container image for OpenShift.
 * Troubleshoot 
 
   ```
-  minishift start --docker-opt "add-registry=quay.io" --memory 10000
+  minishift stop && minishift delete --clear-cache
+  minishift delete --force
+  minishift start --show-libmachine-logs -v5
+  minishift start --docker-opt "add-registry=quay.io" --memory 10000 --cpus 4
+  minishift config set cpus 4
+  minishift config set memory 8G
+  minishift config set image-caching true
+  minishift config set vm-driver virtualbox
+  
   ```
