@@ -1,0 +1,13 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "nodejs-sample-pipeline"
+spec:
+  source:
+    git:
+      uri: 'https://github.com/alexfbasa/jenkins-openshift-pipeline.git'
+    type: Git
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfile: Jenkinsfile-test
+    type: JenkinsPipeline
