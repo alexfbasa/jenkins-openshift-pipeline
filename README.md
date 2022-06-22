@@ -60,6 +60,11 @@ https://community.ibm.com/community/user/integration/viewdocument/create-your-in
 * Troubleshoot 
 
   ```
+  "MINISHIFT DENIED ACCESSS - create /etc/vbox/networks.conf"
+  * 0.0.0.0/0 ::/0
+  * 10.0.0.0/8 192.168.0.0/16
+  * 2001::/64
+
   minishift stop && minishift delete --clear-cache
   minishift delete --force
   minishift start --show-libmachine-logs -v5
