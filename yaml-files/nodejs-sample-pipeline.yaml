@@ -8,4 +8,4 @@ spec:
       uri: "https://github.com/alexfbasa/jenkins-openshift-pipeline.git"
   strategy:
     jenkinsPipelineStrategy:
-      jenkinsfilePath: Jenkinsfile-test
+      jenkinsfilePath: Jenkinsfile-test.groovy
