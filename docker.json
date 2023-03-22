@@ -1,4 +1,4 @@
-curl -k https://192.168.99.118:8443/oapi/v1/projects -H "Authorization: Bearer kUG4As0n7mTx8yls9gQfR8tZUVqPgV8ny_Yy6_j3uYY"
+curl -k https://192.168.99.118:8443/oapi/v1/projects -H "Authorization: Bearer CHAVETOKEN"
 
 oc login -u system:admin
 
